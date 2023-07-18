@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../decortaions/styles.dart';
 import '../widgets/insurance_row.dart';
 import '../widgets/medical_row.dart';
+import 'main_screen.dart';
 
 class InsuranceScreen extends StatefulWidget {
   const InsuranceScreen({super.key});
@@ -85,7 +86,7 @@ class _InsuranceScreenState extends State<InsuranceScreen> {
                                 child: child);
                           },
                           pageBuilder: (context, animation, animationTime) {
-                            return const InsuranceScreen();
+                            return const MainScreen();
                           }));
                 },
                 label: const Text('Skip'),
