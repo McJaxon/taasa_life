@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MapUtils {
@@ -12,3 +13,7 @@ class MapUtils {
     }
   }
 }
+
+// const String google_api_key = "AIzaSyAd4rEAQqfCJGABqW99teDP9BcuyN08";
+const Color primaryColor = Color.fromARGB(255, 45, 103, 129);
+const double defaultPadding = 10;
