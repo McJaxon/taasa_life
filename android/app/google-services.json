@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "574250558138",
-    "project_id": "taasa-736dc",
-    "storage_bucket": "taasa-736dc.appspot.com"
+    "project_number": "392597930838",
+    "project_id": "taasa-d5dad",
+    "storage_bucket": "taasa-d5dad.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:574250558138:android:35390c5e039d520a265883",
+        "mobilesdk_app_id": "1:392597930838:android:9ecac13226307d1c0bccf7",
         "android_client_info": {
           "package_name": "com.example.taasa_life"
         }
       },
       "oauth_client": [
         {
-          "client_id": "574250558138-368i1h1m8bu0kko63rkk9fcc6ougg8li.apps.googleusercontent.com",
+          "client_id": "392597930838-hb4frilrqaiiqvk8d33bo1jnk9gio611.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAYL9fciiFhMwRuhd4iji2wcROXB9rtRiw"
+          "current_key": "AIzaSyD9qw3uVXq2a78yPBMOrIdqEejYXuKCHHA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "574250558138-368i1h1m8bu0kko63rkk9fcc6ougg8li.apps.googleusercontent.com",
+              "client_id": "392597930838-hb4frilrqaiiqvk8d33bo1jnk9gio611.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
