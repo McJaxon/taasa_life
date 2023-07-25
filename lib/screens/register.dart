@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taasa_life/screens/login_screen.dart';
-import 'package:taasa_life/screens/signup_screen.dart';
+import 'package:taasa_life/screens/signin_options.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -24,7 +24,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         switchUser: switchUser,
       );
     } else {
-      return SignUpScreen(
+      return SignInOptions(
         switchUser: switchUser,
       );
     }

@@ -4,6 +4,11 @@ import 'package:get/get.dart';
 const primary = BoxDecoration(
     image: DecorationImage(
         image: AssetImage('assets/images/doc.jpg'), fit: BoxFit.cover));
+
+const primary1 = BoxDecoration(
+    image: DecorationImage(
+        image: AssetImage('assets/images/natural.jpg'), fit: BoxFit.cover));
+
 const primary2 = BoxDecoration(
     image: DecorationImage(
         image: AssetImage('assets/images/wall.jpg'), fit: BoxFit.cover));
@@ -35,6 +40,7 @@ const text2 = InputDecoration(
         borderRadius: BorderRadius.all(Radius.circular(15))));
 
 class Decorations {
+  static BoxDecoration bgImage1 = primary1;
   static BoxDecoration bgImage = primary2;
   static BoxDecoration bgDecoration = primary;
   static InputDecoration decoration = text;

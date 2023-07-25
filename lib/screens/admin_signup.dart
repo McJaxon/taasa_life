@@ -6,15 +6,15 @@ import 'package:taasa_life/decortaions/styles.dart';
 
 import 'profile_screen.dart';
 
-class SignUpScreen extends StatefulWidget {
+class AdminSignUpScreen extends StatefulWidget {
   final VoidCallback switchUser;
-  const SignUpScreen({super.key, required this.switchUser});
+  const AdminSignUpScreen({super.key, required this.switchUser});
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<AdminSignUpScreen> createState() => _AdminSignUpScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen>
+class _AdminSignUpScreenState extends State<AdminSignUpScreen>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   @override
@@ -74,7 +74,7 @@ class _SignUpScreenState extends State<SignUpScreen>
                         children: [
                           SizedBox(
                               child: Text(
-                            'Welcome ',
+                            'Welcome Doctor',
                             style: TextStyle(
                                 fontSize: 25, fontWeight: FontWeight.bold),
                           )),
@@ -180,21 +180,6 @@ class _SignUpScreenState extends State<SignUpScreen>
                         ],
                       ),
                     ),
-                    // Container(
-                    //   padding: const EdgeInsets.only(left: 90),
-                    //   child: Row(
-                    //     children: [
-                    //       const SizedBox(
-                    //         child: Text('Already Have Account'),
-                    //       ),
-                    //       SizedBox(
-                    //         child: TextButton(
-                    //             onPressed: widget.switchUser,
-                    //             child: const Text('LogIn')),
-                    //       )
-                    //     ],
-                    //   ),
-                    // )
                   ],
                 )),
           );

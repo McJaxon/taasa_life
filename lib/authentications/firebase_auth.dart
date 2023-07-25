@@ -2,12 +2,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+final userEmail = FirebaseAuth.instance.currentUser!.email;
+
 class FireStoreAuthentication extends ChangeNotifier {
   CollectionReference fireStore =
       FirebaseFirestore.instance.collection('Health');
   Future snapShot(
       dynamic email, String password, String image, String date, String uid) {
-    return fireStore.doc().set({
+    return fireStore.doc(userEmail).set({
       'id': FirebaseAuth.instance.currentUser!.email,
       'nickName': '',
       'image': image,
