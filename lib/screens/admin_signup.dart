@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:taasa_life/authentications/firebase_auth.dart';
 import 'package:taasa_life/decortaions/loading.dart';
 import 'package:taasa_life/decortaions/styles.dart';
 
-import 'profile_screen.dart';
+import 'admin_profile.dart';
 
 class AdminSignUpScreen extends StatefulWidget {
   final VoidCallback switchUser;
@@ -40,7 +39,6 @@ class _AdminSignUpScreenState extends State<AdminSignUpScreen>
 
   @override
   Widget build(BuildContext context) {
-    final FirebaseAuthentication accessFirebase = FirebaseAuthentication();
     return _loading
         ? const Loading()
         : Scaffold(
@@ -74,7 +72,7 @@ class _AdminSignUpScreenState extends State<AdminSignUpScreen>
                         children: [
                           SizedBox(
                               child: Text(
-                            'Welcome Doctor',
+                            'Welcome',
                             style: TextStyle(
                                 fontSize: 25, fontWeight: FontWeight.bold),
                           )),
@@ -136,41 +134,52 @@ class _AdminSignUpScreenState extends State<AdminSignUpScreen>
                           ),
                           ElevatedButton(
                               onPressed: () {
-                                if (_formKey.currentState!.validate()) {
-                                  setState(() {
-                                    _loading = true;
-                                  });
-                                  if (bookMarked == false) {
-                                    bookMarked = true;
-                                    _controller.forward();
-                                    accessFirebase
-                                        .createEmailAccount(
-                                            emailController.text,
-                                            passwordController.text)
-                                        .then((value) => Navigator.push(
-                                            context,
-                                            PageRouteBuilder(
-                                                transitionDuration:
-                                                    const Duration(
-                                                        milliseconds: 500),
-                                                transitionsBuilder: (context,
-                                                    animation,
-                                                    animationTime,
-                                                    child) {
-                                                  return ScaleTransition(
-                                                      scale: animation,
-                                                      alignment:
-                                                          Alignment.center,
-                                                      child: child);
-                                                },
-                                                pageBuilder: (context,
-                                                    animation, animationTime) {
-                                                  return const ProfileScreen();
-                                                })));
-                                  } else {
-                                    bookMarked = false;
-                                    _controller.reverse();
-                                  }
+                                if (bookMarked == false) {
+                                  bookMarked = true;
+                                  _controller.forward();
+                                  Navigator.push(
+                                      context,
+                                      PageRouteBuilder(
+                                          transitionDuration:
+                                              const Duration(milliseconds: 500),
+                                          transitionsBuilder: (context,
+                                              animation, animationTime, child) {
+                                            return ScaleTransition(
+                                                scale: animation,
+                                                alignment: Alignment.center,
+                                                child: child);
+                                          },
+                                          pageBuilder: (context, animation,
+                                              animationTime) {
+                                            return const AdminProfileScreen();
+                                          }));
+                                  // accessFirebase
+                                  //     .createEmailAccount(
+                                  //         emailController.text,
+                                  //         passwordController.text)
+                                  //     .then((value) => Navigator.push(
+                                  //         context,
+                                  //         PageRouteBuilder(
+                                  //             transitionDuration:
+                                  //                 const Duration(
+                                  //                     milliseconds: 500),
+                                  //             transitionsBuilder: (context,
+                                  //                 animation,
+                                  //                 animationTime,
+                                  //                 child) {
+                                  //               return ScaleTransition(
+                                  //                   scale: animation,
+                                  //                   alignment:
+                                  //                       Alignment.center,
+                                  //                   child: child);
+                                  //             },
+                                  //             pageBuilder: (context,
+                                  //                 animation, animationTime) {
+                                  //               return const AdminProfileScreen();
+                                  //             })));
+                                } else {
+                                  bookMarked = false;
+                                  _controller.reverse();
                                 }
                               },
                               child: const Text('Sign Up')),

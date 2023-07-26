@@ -116,6 +116,7 @@ class _SignUpScreenState extends State<SignUpScreen>
                           ),
                           SizedBox(
                               child: TextFormField(
+                            obscureText: true,
                             controller: passwordController,
                             decoration: Decorations.decoration
                                 .copyWith(label: const Text('Create Password')),
@@ -127,6 +128,7 @@ class _SignUpScreenState extends State<SignUpScreen>
                           ),
                           SizedBox(
                               child: TextFormField(
+                            obscureText: true,
                             controller: confirmPasswordController,
                             decoration: Decorations.decoration.copyWith(
                                 label: const Text('Confirm Password')),
