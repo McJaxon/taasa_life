@@ -215,7 +215,7 @@ class _AdminProfileScreenState extends State<AdminProfileScreen> {
                               context,
                               MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      const MainScreen()));
+                                      MainScreen(profession: _index)));
                         },
                         child: const Text('Continue')),
                   )
